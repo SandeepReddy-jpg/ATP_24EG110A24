@@ -10,7 +10,7 @@ import cors from 'cors'
 const app = exp()
 app.use(
   cors({
-    origin: ['http://localhost:5173', 'https://atp-24-eg-110-a17.vercel.app'],
+    origin: ['http://localhost:5173', 'https://atp-24-eg-110-a24-oxlqdwl5e-24eg110a24-5909s-projects.vercel.app/'],
     credentials: true
   })
 )
