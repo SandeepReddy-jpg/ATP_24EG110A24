@@ -39,6 +39,7 @@ const connectDB = async () => {
   }
 }
 connectDB()
+console.log("ENV:", process.env.DB_URL);
 
 //to handle invalid path
 app.use((req, res, next) => {
