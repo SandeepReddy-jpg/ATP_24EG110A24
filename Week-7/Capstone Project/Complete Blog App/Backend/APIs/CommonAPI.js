@@ -21,6 +21,13 @@ commonApp.post(
       if (!allowedROles.includes(newUser.role)) {
         return res.status(400).json({ message: 'Invalid role' })
       }
+
+      // FIX: Check for duplicate email before uploading to Cloudinary
+      const existingUser = await userModel.findOne({ email: newUser.email })
+      if (existingUser) {
+        return res.status(409).json({ message: 'Email already registered. Please login.' })
+      }
+
       //upload image to cloudinary from memoryStorage
       if (req.file) {
         cloudinaryResult = await uploadToCloudinary(req.file.buffer)
@@ -37,7 +44,7 @@ commonApp.post(
       await newUserDocument.save({ validateBeforeSave: false })
       res.status(201).json({ message: 'User created' })
     } catch (err) {
-      //delete image from cloudinary
+      //delete image from cloudinary if upload succeeded but save failed
       if (cloudinaryResult?.public_id) {
         await cloudinary.uploader.destroy(cloudinaryResult.public_id)
       }
