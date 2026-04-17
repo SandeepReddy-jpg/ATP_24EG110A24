@@ -17,7 +17,7 @@ app.use('/employee-api', employeeApp)
 
 const connectDB = async () => {
   try {
-    await connect(process.env.DB_URL)
+    await connect(process.env.DB_URL, { family: 4 })
     console.log('DB Connected')
     const port = process.env.PORT || 4000
     app.listen(port, () => console.log(`server listening on ${port}`))
