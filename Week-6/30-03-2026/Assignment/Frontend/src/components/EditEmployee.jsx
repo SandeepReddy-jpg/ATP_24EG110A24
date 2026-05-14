@@ -8,19 +8,14 @@ function EditEmployee() {
   const [error, setError] = useState(null)
   const navigate = useNavigate()
   const { state } = useLocation()
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    setValue
-  } = useForm()
+  const { register, handleSubmit, setValue } = useForm()
   useEffect(() => {
     setValue('name', state.name)
     setValue('email', state.email)
     setValue('mobile', state.mobile)
     setValue('designation', state.designation)
     setValue('companyName', state.companyName)
-  })
+  }, [setValue, state])
   const saveModifiedEmp = async (modifiedEmp) => {
     try {
       setLoading(true)

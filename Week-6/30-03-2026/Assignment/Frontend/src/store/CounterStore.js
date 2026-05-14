@@ -21,7 +21,8 @@ export const useCounterStore = create((set) => ({
   changeCounter: () => set({ newCounter: 500 }),
   decrementCounter20: () =>
     set((state) => ({ newCounter1: state.newCounter1 - 20 })),
-  changeEmail: () => set({ ...user, email: 'ravikumar@mail.com' }),
-  changeName: () => set({ ...user, name: 'ravikumar@mail.com' }),
-  changeAge: () => set({ ...user, age: 'ravikumar@mail.com' })
+  changeEmail: () => set((state) => ({ user: { ...state.user, email: 'ravikumar@mail.com' } })),
+  changeName: () => set((state) => ({ user: { ...state.user, name: 'ravikumar' } })),
+  changeAge: () => set((state) => ({ user: { ...state.user, age: 25 } }))
+
 }))

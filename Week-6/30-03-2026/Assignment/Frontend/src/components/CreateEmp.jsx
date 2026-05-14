@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form'
-import { useContext, useState } from 'react'
+import { useState } from 'react'
+
 import { useNavigate } from 'react-router'
 import axios from 'axios'
 import BASE_URL from '../config'
@@ -8,11 +9,8 @@ function CreateEmp() {
   const [error, setError] = useState(null)
   const navigate = useNavigate()
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors }
-  } = useForm()
+  const { register, handleSubmit } = useForm()
+
 
   const onFormSubmit = async (newEmpObj) => {
     console.log(newEmpObj)
