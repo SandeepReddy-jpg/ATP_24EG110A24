@@ -1,6 +1,9 @@
 import { Schema, model, Types } from "mongoose";
+/**
+ *   Cart Schema
+ Embedded schema for items in the user's shopping cart.
+ */
 
-//Create cart Schema {product,count,}
 
 const cartSchema = new Schema({
   product: {
@@ -13,7 +16,11 @@ const cartSchema = new Schema({
   },
 });
 
-//Create User Schema(username,password,email,age)
+/**
+ * User Schema
+ * Defines the structure for user documents, including credentials and cart items.
+ */
+
 
 const userSchema = new Schema(
   {
@@ -44,5 +51,9 @@ const userSchema = new Schema(
   },
 );
 
-//Generate UserModel
+/**
+ * User Model
+ * Provides an interface to the "users" collection in MongoDB.
+ */
 export const userModel = model("user", userSchema);
+

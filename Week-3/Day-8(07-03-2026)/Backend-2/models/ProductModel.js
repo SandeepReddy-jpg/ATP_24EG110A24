@@ -1,4 +1,15 @@
+/**
+ * @file ProductModel.js
+ * @description Mongoose schema and model for products.
+ */
+
 import { Schema, model } from "mongoose";
+
+/**
+ * Product Schema
+ * Defines the structure for product documents in MongoDB.
+ */
+
 
 const productSchema = new Schema(
   {
@@ -27,4 +38,9 @@ const productSchema = new Schema(
   },
 );
 
+/**
+ * Product Model
+ * Provides an interface to the "products" collection in MongoDB.
+ */
 export const productModel = model("product", productSchema);
+

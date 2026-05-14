@@ -1,7 +1,5 @@
+
 import { Schema, model, Types } from "mongoose";
-
-//Create cart Schema {product,count,}
-
 const cartSchema = new Schema({
   product: {
     type: Types.ObjectId,
@@ -13,7 +11,11 @@ const cartSchema = new Schema({
   },
 });
 
-//Create User Schema(username,password,email,age)
+/**
+ * User Schema
+ * Defines the structure for user documents, including credentials and cart items.
+ */
+
 
 const userSchema = new Schema(
   {
@@ -44,5 +46,9 @@ const userSchema = new Schema(
   },
 );
 
-//Generate UserModel
+/**
+ * User Model
+ * Provides an interface to the "users" collection in MongoDB.
+ */
 export const userModel = model("user", userSchema);
+

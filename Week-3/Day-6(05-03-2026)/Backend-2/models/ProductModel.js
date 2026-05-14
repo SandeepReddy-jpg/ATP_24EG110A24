@@ -1,5 +1,5 @@
-import { Schema, model } from "mongoose";
 
+import { Schema, model } from "mongoose";
 const productSchema = new Schema(
   {
     productId: {
@@ -27,4 +27,9 @@ const productSchema = new Schema(
   },
 );
 
+/**
+ * Product Model
+ * Provides an interface to the "products" collection in MongoDB.
+ */
 export const productModel = model("product", productSchema);
+
