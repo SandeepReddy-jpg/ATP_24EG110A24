@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #7fb3b5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 80%;
+  max-width: 900px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+h2 {
+  margin: 0;
+  padding: 15px;
+  text-align: center;
+  background: #2f7f84;
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #cde6e7;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+tbody tr:nth-child(even) {
+  background: #eef6f6;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

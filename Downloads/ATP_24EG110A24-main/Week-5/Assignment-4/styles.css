@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 15px 0;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar li {
+  display: inline-block;
+  margin: 0 25px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Cards container */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 80px;
+  align-items: center;
+}
+
+/* Card */
+.card {
+  width: 220px;
+  background: #fff;
+  padding: 25px 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image */
+.card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+/* Tag */
+.tag {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.travel {
+  background: #5c6bc0;
+}
+.tech {
+  background: #ffb300;
+}
+.fashion {
+  background: #ec407a;
+}
+
+/* Text */
+.card h3 {
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.card p {
+  font-size: 12px;
+  color: #777;
+  line-height: 1.4;
+  margin: 0;
+}

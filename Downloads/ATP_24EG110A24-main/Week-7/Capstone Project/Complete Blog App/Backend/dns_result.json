@@ -1,0 +1,23 @@
+[
+  {
+    "name": "ac-r83c8tg-shard-00-02.eo9svfh.mongodb.net",
+    "port": 27017,
+    "priority": 0,
+    "weight": 0,
+    "type": "SRV"
+  },
+  {
+    "name": "ac-r83c8tg-shard-00-01.eo9svfh.mongodb.net",
+    "port": 27017,
+    "priority": 0,
+    "weight": 0,
+    "type": "SRV"
+  },
+  {
+    "name": "ac-r83c8tg-shard-00-00.eo9svfh.mongodb.net",
+    "port": 27017,
+    "priority": 0,
+    "weight": 0,
+    "type": "SRV"
+  }
+]

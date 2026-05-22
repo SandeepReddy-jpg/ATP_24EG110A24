@@ -1,0 +1,63 @@
+###read all users
+GET http://localhost:3000/users
+
+### read a user by id
+GET http://localhost:3000/users/1
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "id":1,
+  "name":"vikas",
+  "age":20
+}
+
+###
+PUT http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "id":1,
+  "name":"bhanu",
+  "age":22
+}
+
+###
+DELETE http://localhost:3000/users/1
+
+
+
+
+###
+GET http://localhost:3000/products
+
+###
+GET http://localhost:3000/products/brand/dell
+
+###
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "id":1,
+    "proudct":"laptop",
+    "brand":"dell",
+    "price":50000
+}
+
+###
+PUT  http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "id":1,
+    "product":"mobile",
+    "brand":"samsung",
+    "price":30000
+}
+
+###
+DELETE http://localhost:3000/products/1
+
