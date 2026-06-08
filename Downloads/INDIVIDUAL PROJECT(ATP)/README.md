@@ -12,6 +12,14 @@ An intelligent web application that analyzes and grades resumes using AI-powered
 - **Detailed Feedback**: Get comprehensive feedback on resume improvements
 - **User Profile**: Manage your personal profile and preferences
 - **Protected Routes**: Secure access to user-specific content
+- **🎯 Smart Job Matcher**: NEW! Match your resume against job descriptions with:
+  - Overall match percentage
+  - ATS (Applicant Tracking System) compatibility score
+  - Career Alignment Score (Experience, Industry, Skills, Education, Culture Fit)
+  - Missing keyword identification & suggestions
+  - Skills gap analysis with specific improvement recommendations
+  - Detailed strengths, weaknesses, and action items
+  - Save and compare multiple job matches
 
 ## 🛠️ Tech Stack
 
@@ -170,6 +178,12 @@ AI-POWERED RESUME GRADER/
 - `POST /api/analysis/analyze` - Analyze a resume
 - `GET /api/analysis/:resumeId` - Get analysis results
 - `PUT /api/analysis/skills` - Update skills
+
+### Job Matching (NEW)
+- `POST /api/job-match/analyze-job` - Analyze resume against a job description
+- `GET /api/job-match/matches` - Get all saved job matches
+- `GET /api/job-match/matches/:matchId` - Get specific job match details
+- `DELETE /api/job-match/matches/:matchId` - Delete a saved match
 
 ## 🎯 Usage
 
